@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'JoyTalkSDK'
-    s.version          = '1.0.0'
+    s.version          = '0.1.0'
     s.summary          = 'JoyTalk customer service SDK'
     s.description      = <<-DESC
     JoyTalkSDK 是一个客户服务 SDK，提供完整的客服功能。
