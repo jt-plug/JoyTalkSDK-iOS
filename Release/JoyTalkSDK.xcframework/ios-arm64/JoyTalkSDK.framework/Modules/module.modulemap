@@ -1,0 +1,6 @@
+framework module JoyTalkSDK {
+  umbrella header "JoyTalkSDK.h"
+  export *
+
+  module * { export * }
+}
