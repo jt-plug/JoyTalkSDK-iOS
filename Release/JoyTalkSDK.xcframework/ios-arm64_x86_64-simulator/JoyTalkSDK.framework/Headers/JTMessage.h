@@ -11,38 +11,39 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef enum : NSUInteger {
-    JTMessageContentTypeText                 = 1,//文字
-    JTMessageContentTypeImage                = 2,//图片
-    JTMessageContentTypeVideo                = 3,//视频
-    JTMessageContentTypeFile                 = 4,//文件
-    JTMessageContentTypeFaq                  = 100,//Faq问题
-    JTMessageContentTypeTransfer             = 200,//转接
-    JTMessageContentTypeUnbind               = 300,//解绑
-} JTMessageContentType;
+typedef NS_ENUM(NSUInteger, JTMessageContentType) {
+    JTMessageContentTypeText                 = 1,   // 文字
+    JTMessageContentTypeImage                = 2,   // 图片
+    JTMessageContentTypeVideo                = 3,   // 视频
+    JTMessageContentTypeFile                 = 4,   // 文件
+    JTMessageContentTypeFaq                  = 100, // Faq问题
+    JTMessageContentTypeTransfer             = 200, // 转接
+    JTMessageContentTypeUnbind               = 300, // 解绑
+    JTMessageContentTypeTips                 = 400, // 提示语
+};
 
-typedef enum : NSUInteger {
-    JTMessageSendStatusSending               = 10,//发送中 (sending)
-    JTMessageSendStatusArrived               = 20,//发送到达 (arrived)
-    JTMessageSendStatusFailed                = 30,//发送失败 (failed)
-} JTMessageSendStatus;
+typedef NS_ENUM(NSUInteger, JTMessageSendStatus) {
+    JTMessageSendStatusSending               = 10, // 发送中 (sending)
+    JTMessageSendStatusArrived               = 20, // 发送到达 (arrived)
+    JTMessageSendStatusFailed                = 30, // 发送失败 (failed)
+};
 
-typedef enum : NSUInteger {
-    JTSendUserTypeAgent                      = 1,//来自 客服
-    JTSendUserTypeUser                       = 2,//来自 用户
-    JTSendUserTypeAnonymous                  = 3,//来自 匿名
-} JTSendUserType;
+typedef NS_ENUM(NSUInteger, JTSendUserType) {
+    JTSendUserTypeAgent                      = 1,   // 来自客服
+    JTSendUserTypeUser                       = 2,   // 来自用户
+    JTSendUserTypeAnonymous                  = 3,   // 来自匿名
+};
 
-typedef enum : NSUInteger {
-    JTMessageTypeSend                        = 1,//发送
-    JTMessageTypeCancel                      = 2,//撤回
-    JTMessageTypeEdit                        = 3,//编辑
-    JTMessageTypeSystemNotification          = 4,//系统通知
-    JTMessageTypeTransfer                    = 5,//转接
-    JTMessageTypeIncoming                    = 6,//进线
-    JTMessageTypeReply                       = 7,//回复
-    JTMessageTypeUnbind                      = 8,//解绑
-} JTMessageType;
+typedef NS_ENUM(NSUInteger, JTMessageType) {
+    JTMessageTypeSend                        = 1,   // 发送
+    JTMessageTypeCancel                      = 2,   // 撤回
+    JTMessageTypeEdit                        = 3,   // 编辑
+    JTMessageTypeSystemNotification          = 4,   // 系统通知
+    JTMessageTypeTransfer                    = 5,   // 转接
+    JTMessageTypeIncoming                    = 6,   // 进线
+    JTMessageTypeReply                       = 7,   // 回复
+    JTMessageTypeUnbind                      = 8,   // 解绑
+};
 
 @interface JTMessage : NSObject
 
@@ -64,7 +65,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy, nullable) NSString *userAvatar;
 /** 操作类型 (1.发送消息 2.撤回 3.编辑 4.系统通知 5.转接 6.进线 7.回复 8.解绑) */
 @property (nonatomic, copy, nullable) NSString *msgType;
-/** 消息内容类型 1文字 、2图片、3视频、4文件、100Faq问题、200转接、300解绑*/
+/** 消息内容类型 1文字 、2图片、3视频、4文件、100Faq问题、200转接、300解绑、400提示语*/
 @property (nonatomic, assign) JTMessageContentType contentType;
 /** 创建时间 */
 @property (nonatomic, assign) long createTime;
@@ -75,13 +76,13 @@ typedef enum : NSUInteger {
 /** 消息内容 */
 @property (nonatomic, copy, nullable) NSString *content;
 /** 是否编辑 */
-@property (nonatomic, assign) bool isEdit;
+@property (nonatomic, assign) BOOL isEdit;
 /** 是否撤回 */
-@property (nonatomic, assign) bool isCancel;
+@property (nonatomic, assign) BOOL isCancel;
 /** 客服是否已读 */
-@property (nonatomic, assign) bool isRead;
+@property (nonatomic, assign) BOOL isRead;
 /** 是否回复 */
-@property (nonatomic, assign) bool isReply;
+@property (nonatomic, assign) BOOL isReply;
 /** 回复消息 */
 @property (nonatomic, copy, nullable) NSString *replyContent;
 /** 回复内容类型 1文字 、2图片、3视频、4文件*/

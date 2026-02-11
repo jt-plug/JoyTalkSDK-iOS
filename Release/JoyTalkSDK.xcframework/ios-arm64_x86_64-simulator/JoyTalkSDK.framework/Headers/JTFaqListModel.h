@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * FAQ 列表模型
  */
-@class JTFaqTopicModel, JTFaqItemModel;
+@class JTFaqTopicModel;
 @interface JTFaqListModel : NSObject
 
 /** FAQ 名称 */
@@ -20,11 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** 引导文本 */
 @property (nonatomic, copy, nullable) NSString *guideText;
 /** ID */
-@property (nonatomic, assign) int faqId;
+@property (nonatomic, assign) NSInteger faqId;
 /** 商户ID */
-@property (nonatomic, assign) int merchantId;
+@property (nonatomic, assign) NSInteger merchantId;
 /** 显示延迟秒数 */
-@property (nonatomic, assign) int showDelaySeconds;
+@property (nonatomic, assign) NSInteger showDelaySeconds;
 /** 一级问题数组 */
 @property (nonatomic, strong, nullable) NSArray<JTFaqTopicModel *> *topic;
 
@@ -34,19 +34,19 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JTFaqTopicModel : NSObject
 
 /** FAQ ID */
-@property (nonatomic, assign) int faqId;
+@property (nonatomic, assign) NSInteger faqId;
 /** ID */
-@property (nonatomic, assign) int questionId;
+@property (nonatomic, assign) NSInteger questionId;
 /** 是否多选 (0:单选 1:多选) */
 @property (nonatomic, assign) BOOL isMulti;
 /** 选项数组 */
 @property (nonatomic, strong, nullable) NSArray<JTFaqTopicModel *> *item;
 /** 商户ID */
-@property (nonatomic, assign) int merchantId;
+@property (nonatomic, assign) NSInteger merchantId;
 /** 问题 */
 @property (nonatomic, copy, nullable) NSString *question;
 /** 序列号 */
-@property (nonatomic, assign) int serialNum;
+@property (nonatomic, assign) NSInteger serialNum;
 
 /** 答案 */
 @property (nonatomic, copy, nullable) NSString *answer;

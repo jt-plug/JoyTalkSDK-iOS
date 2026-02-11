@@ -15,19 +15,19 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JTConsultationItemModel : NSObject
 
 /** 咨询类型名称 */
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy, nonnull) NSString *name;
 
 /** 引导文案 */
-@property (nonatomic, copy) NSString *guideText;
+@property (nonatomic, copy, nonnull) NSString *guideText;
 
 /** 客户组ID */
-@property (nonatomic, copy) NSString *customerGroupId;
+@property (nonatomic, copy, nonnull) NSString *customerGroupId;
 
 /** 咨询类型ID */
-@property (nonatomic, copy) NSString *consultationId;
+@property (nonatomic, copy, nonnull) NSString *consultationId;
 
 /** 是否默认 */
-@property (nonatomic, assign) bool isDefault;
+@property (nonatomic, assign) BOOL isDefault;
 
 /**
  * 从字典创建模型

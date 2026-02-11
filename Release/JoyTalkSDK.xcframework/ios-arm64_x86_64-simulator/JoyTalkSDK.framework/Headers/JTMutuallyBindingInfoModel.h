@@ -22,13 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *customerName;
 
 /** 接线类型id */
-@property (nonatomic, assign) int groupId;
+@property (nonatomic, assign) NSInteger groupId;
 
 /** 接线类型组名 */
 @property (nonatomic, copy, nullable) NSString *groupName;
 
-/** 会话id，非自增 */
+/** 会话id */
 @property (nonatomic, copy, nullable) NSString *sessionId;
+
+/** 原本旧的会话id */
+@property (nonatomic, copy, nullable) NSString *oldSessionId;
 
 @end
 

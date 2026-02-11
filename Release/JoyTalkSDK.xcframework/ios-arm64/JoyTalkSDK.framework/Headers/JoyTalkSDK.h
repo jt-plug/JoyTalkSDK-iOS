@@ -15,12 +15,13 @@ FOUNDATION_EXPORT const unsigned char JoyTalkSDKVersionString[];
 
 // 对外公开的所有头文件
 #import <JoyTalkSDK/JTManager.h>
-#import <JoyTalkSDK/JTMainMessageModel.h>
 #import <JoyTalkSDK/JTMessage.h>
 #import <JoyTalkSDK/JTMutuallyBindingInfoModel.h>
-#import <JoyTalkSDK/JTLog.h>
-#import <JoyTalkSDK/JTDateUtil.h>
-#import <JoyTalkSDK/JTConsultationItemModel.h>
 #import <JoyTalkSDK/JTUserInfoModel.h>
+#import <JoyTalkSDK/JTConsultationItemModel.h>
 #import <JoyTalkSDK/JTErrorCode.h>
+#import <JoyTalkSDK/JTDefinition.h>
 #import <JoyTalkSDK/JTCallbackDefine.h>
+#import <JoyTalkSDK/JTFaqListModel.h>
+#import <JoyTalkSDK/JTFileModel.h>
+#import <JoyTalkSDK/JTAuthRespData.h>

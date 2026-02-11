@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
     # s.source_files = 'JoyTalkSDK/**/*.{h,m,mm,swift}'
     # s.public_header_files = 'JoyTalkSDK/**/*.h'
     # # 开发调试阶段三方依赖
-    # s.dependency 'AFNetworking', '~> 4.0.1'
     # s.dependency 'MJExtension',  '~> 3.4.2'
     # s.dependency 'SocketRocket', '~> 0.7.1'
     
@@ -25,5 +24,5 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'Release/JoyTalkSDK.xcframework'
     
     # 系统框架依赖
-    s.frameworks = 'UIKit', 'Foundation'
+    s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration'
   end

@@ -4,69 +4,53 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/JTAuthRespData.h</key>
+		<data>
+		aIdue08mXTn/BsgV1HLonqrhRDA=
+		</data>
 		<key>Headers/JTCallbackDefine.h</key>
 		<data>
-		46GOIZGJsYCsoW3iwMiowaEO8bk=
+		WtcKWDE5OYf9Kd19QiZ8BTLsADM=
 		</data>
 		<key>Headers/JTConsultationItemModel.h</key>
 		<data>
-		i5AlXnmNVzHmKnxaP22vET/f1sA=
-		</data>
-		<key>Headers/JTDateUtil.h</key>
-		<data>
-		15FwD1rNkCDf3QaGYOUGF6snUeE=
+		mp6QA7Fc4ng+WFNdKr2Z3iaz8Y8=
 		</data>
 		<key>Headers/JTDefinition.h</key>
 		<data>
-		nIlnfEyqAuAQmV1WXFC04iaQoVQ=
+		/ASpzAZBIFTePDMIu1tou5WYrYo=
 		</data>
 		<key>Headers/JTErrorCode.h</key>
 		<data>
-		nrGOcHmHwnOdHLTzFxYJZY2bS10=
+		r189ta/ehtioygbmGsEwNNeVxK4=
 		</data>
 		<key>Headers/JTFaqListModel.h</key>
 		<data>
-		KWVJa3RseiD5wKnlmRM/9zuyWdU=
-		</data>
-		<key>Headers/JTFaqModel.h</key>
-		<data>
-		YY23Tjzn+LF4amwOYPVlebpROjI=
+		/lZeHkuL1XV7Z1Sy2Pz2UAB435Y=
 		</data>
 		<key>Headers/JTFileModel.h</key>
 		<data>
 		gjcz/lMBADht6mQuaDP01gKBh4E=
 		</data>
-		<key>Headers/JTLog.h</key>
-		<data>
-		mlnpej7ypy0yIs/vEm2NUEr95PI=
-		</data>
-		<key>Headers/JTMainMessageModel.h</key>
-		<data>
-		gXd+cQbn7iQ2w5rPaNKw2UrB7SA=
-		</data>
 		<key>Headers/JTManager.h</key>
 		<data>
-		fQl1f6HHgKpwE5q59nNyIOmkcqE=
+		dIKgThmctYSTPZv8ui1Ilnz4x18=
 		</data>
 		<key>Headers/JTMessage.h</key>
 		<data>
-		m1o+m4Fc2SXmkdxq8jIbFdu9I5A=
+		DuQlA6ld/DZ9M8hvkI2NbusdAHE=
 		</data>
 		<key>Headers/JTMutuallyBindingInfoModel.h</key>
 		<data>
-		SDC/a2/svJzQXO9+BUdhcCTqjBI=
-		</data>
-		<key>Headers/JTObsAuthInfoModel.h</key>
-		<data>
-		0FLev7zXM1Klgwch+LKHtbVVKKU=
+		X0XYpzcR/y1CKL+N89huB98KMb0=
 		</data>
 		<key>Headers/JTUserInfoModel.h</key>
 		<data>
-		BLhbytlspS4BeR7O2R3AFot6pAE=
+		XiGumZOmGtReFAnboC5S5VUjujU=
 		</data>
 		<key>Headers/JoyTalkSDK.h</key>
 		<data>
-		P1LgXGzBUHOPgwotygJ8bd1sRN8=
+		gM5xHH+U2DKwgibXS/Adk6AZ5sU=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -87,53 +71,46 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/JTAuthRespData.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GLiC1dm0xXQLlu1jC27bnm5ww1xCfv9/4D6byd5XhGo=
+			</data>
+		</dict>
 		<key>Headers/JTCallbackDefine.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n6FK/1Cb9yIDqa4LNzvMyB0wJfqRtrxIwmW3jgbLwnQ=
+			6zjDQndjNIw/CclXHbqHv+dv3ERnM8clSlaBthq/+dc=
 			</data>
 		</dict>
 		<key>Headers/JTConsultationItemModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iHLa2GkXoxBnhhIhQyyaXHliwuQ3lB9cvOCwStiaZxc=
-			</data>
-		</dict>
-		<key>Headers/JTDateUtil.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jJR6P52U33PBThWiUs/j645PPEnEyQ9vheoagT8qBk4=
+			CdGCBtWnqKb8TSlVmT1dlqmay/V9ENMUD2owAnXFnE0=
 			</data>
 		</dict>
 		<key>Headers/JTDefinition.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a8g+dVztbChyZyeRRqKCDRsJAe4weLnvvgNmHCVpVXg=
+			/2xQx6AZvVR6X1dFMCDCvc6UBubp9cAfoH+TOO7fVxk=
 			</data>
 		</dict>
 		<key>Headers/JTErrorCode.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tD9RHc0XwkdAIF3aapM0wZW8wPk7w+AhQfT1j2LPuIs=
+			fLe6SY4uuohZ05d8/6OjRn5n54igvO6YZ8NzaD5N/wY=
 			</data>
 		</dict>
 		<key>Headers/JTFaqListModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pRYiRXDN1w253Q/l58LMthpRdJ9EvHstO9cl7np/Y2o=
-			</data>
-		</dict>
-		<key>Headers/JTFaqModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0rzaWOFKRjOPmvQvMTNfe1AKdKAeVRuosmcj1k2n6AM=
+			CV6R0+3hhgm4dwPOiqVejCWO5tYqp+cwlu6B1OUAk0o=
 			</data>
 		</dict>
 		<key>Headers/JTFileModel.h</key>
@@ -143,60 +120,39 @@
 			8Vnaw31lxZhZ1eXUrRBEqqpjcmYy4gWVki6lV5Pid7c=
 			</data>
 		</dict>
-		<key>Headers/JTLog.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ECMmpdUpnP2xeCTfpy9vhojKyPbbqubsLeUAnh+7C0M=
-			</data>
-		</dict>
-		<key>Headers/JTMainMessageModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Vd/4MeYvFNNqjDgvk9uKdHIZCCvstLjtRHJLub1D5rc=
-			</data>
-		</dict>
 		<key>Headers/JTManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FTKvQgyt60F2OqhHxcwn6oIjcZRShxLR0MjJEvxldaw=
+			aCnO8FJsJzGG/OWvzRrNVwUpGXmU6dVWE50qOYBUNw0=
 			</data>
 		</dict>
 		<key>Headers/JTMessage.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PufKmcQJL4n26HnAXkNlcZrYUMpCGCDlHIcyrrWZthI=
+			nt8+ZfK0aAztqn+a8pSwZUzoDqPOG5mxWFnmBiae3EY=
 			</data>
 		</dict>
 		<key>Headers/JTMutuallyBindingInfoModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zUmy2q3Ma5XNzJJ6AQhhlhtgXrEZIXoQQy2Kgj3oZxk=
-			</data>
-		</dict>
-		<key>Headers/JTObsAuthInfoModel.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tFmSzLytgbTpP19J6e7uIVBj18xR3+QWmoLIhkyQjgw=
+			LNvs1mZ9Fd43qUJCSFkfKtjG4HkMgY+96K3ZS+4Qt+o=
 			</data>
 		</dict>
 		<key>Headers/JTUserInfoModel.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SufX4nOBMdP8OCl+L7rTORUVW0GJ78moqQvRYpuJL7o=
+			6c6M5ZFbHJe7yee+3KLNQGqZuTE1d/pAjVVD4CKFqsE=
 			</data>
 		</dict>
 		<key>Headers/JoyTalkSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3SPtdB15fbQIDRd4YlkMIehMi90EdqWDFKTLRI5cfBQ=
+			6J3LQL4ZmCh0iRICJ1WcdufT++PKWqLe0U4GoRrqB8s=
 			</data>
 		</dict>
 		<key>MJExtension.bundle/Info.plist</key>

@@ -9,7 +9,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <JoyTalkSDK/JTMainMessageModel.h>
 #import <JoyTalkSDK/JTDefinition.h>
 #import <JoyTalkSDK/JTCallbackDefine.h>
 #import <JoyTalkSDK/JTErrorCode.h>
@@ -23,9 +22,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 悦聊 SDK 核心管理类
  * @note 所有方法都是类方法，无需创建实例
+ * @note 所有回调（completion、success、failure、onWebSocketStateCallback、onReceiveMessageCallback 等）均在主线程执行，可直接更新 UI
  */
 
 @interface JTManager : NSObject
+
+/**
+ * 匿名用户认证
+ * @param appKey 商户AppKey（必填）
+ * @param entranceId 入口ID（必填，用于获取默认用户信息）
+ * @param success 成功回调
+ * @param failure 失败回调
+ */
++ (void)anonymousAuthWithAppKey:(NSString *)appKey
+                     entranceId:(NSString *)entranceId
+                        success:(JTOnAnonymousAuthCallback)success
+                        failure:(JTOnFailureCallback)failure;
+
 /**
  * 初始化 SDK
  *
@@ -44,7 +57,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @warning 需要在初始化成功后调用才有效
  */
 + (void)getConsultationListWithSuccess:(JTOnGetConsultationListCallback)success failure:(JTOnFailureCallback)failure;
-
 
 /**
  * 开启当前对话
@@ -97,7 +109,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 发送图片消息
  *
  * @param imagePath 图片路径
- * @return 该条图片消息。此时该消息状态为发送中，message的content属性是本地图片路径
+ * @return 该条图片消息。此时该消息状态为发送中.
  * @warning SDK不会去限制图片大小，如果开发者需要限制图片大小，需要调整图片大小后，再使用此接口
  * @warning 需要在初始化成功后，且用户是在线状态时调用才有效
  */
@@ -109,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 发送视频消息
  *
  * @param videoPath 需要发送的视频本地路径
- * @return 该条视频消息。此时该消息状态为发送中，message的content属性是本地视频路径.
+ * @return 该条视频消息。此时该消息状态为发送中.
  * @warning 使用该接口，会对提供的视频进行压缩，并且转换为MP4格式发送.
  * @warning 需要在初始化成功后，且用户是在线状态时调用才有效
  */
@@ -121,7 +133,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 发送文件消息
  *
  * @param filePath 需要发送的文件本地路径（fileName 和 fileSize 在内部处理）
- * @return 该条文件消息。此时该消息状态为发送中，message的content属性是本地文件路径.
+ * @return 该条文件消息。此时该消息状态为发送中.
  * @warning 需要在初始化成功后，且用户是在线状态时调用才有效
  */
 + (JTMessage *)sendJTFileMessageWithFilePath:(NSString *)filePath
@@ -182,14 +194,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cancelDownloadForUrl:(NSString *)urlString;
 
 /**
- * 清除所有多媒体缓存
- *
- * @param completion 完成回调，返回清除前缓存大小（MB）
- * @warning 此操作不可逆
- */
-+ (void)removeAllMediaDataWithCompletion:(void (^)(float mediaSize))completion;
-
-/**
  * 设置用户离线
  *
  * @warning 离线后需要重新调用 startConversation 才能重新上线
@@ -199,12 +203,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 注册状态观察者
  *
- * @param block 状态变化回调
- * @param key   观察者唯一标识符
- * @warning 不要使用 self，避免循环引用
- * @note 需要在不需要时调用 removeStateChangeObserverWithKey: 移除
+ * @param block 状态变化回调（在主线程执行）
+ * @param key   观察者唯一标识符，建议使用字符串常量，勿用 self 避免循环引用
+ * @warning block 内若使用 self，请用 __weak 弱引用，否则易造成循环引用与内存泄漏
+ * @note 必须在不需要时（如 dealloc）调用 removeStateChangeObserverWithKey: 移除，否则会泄漏
  */
-+ (void)addStateObserverWithBlock:(StateChangeBlock)block withKey:(NSString *)key;
++ (void)addStateObserverWithBlock:(JTStateChangeBlock)block withKey:(NSString *)key;
 
 /**
  * 移除状态观察者
@@ -296,6 +300,20 @@ NS_ASSUME_NONNULL_BEGIN
  * @return YES 表示网络可用，NO 表示不可用
  */
 + (BOOL)obtainNetIsReachable;
+
+/**
+ * 设置是否开启 SDK 内部日志打印
+ *
+ * @param enabled YES 开启，NO 关闭。建议正式环境设为 NO
+ */
++ (void)setLogEnabled:(BOOL)enabled;
+
+/**
+ * 获取当前是否开启 SDK 内部日志打印
+ *
+ * @return YES 已开启，NO 已关闭
+ */
++ (BOOL)isLogEnabled;
 
 @end
 

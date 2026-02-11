@@ -5,6 +5,8 @@
 //  Created by yunguang on 2026/1/19.
 //
 
+NS_ASSUME_NONNULL_BEGIN
+
 #ifndef JTErrorCode_h
 #define JTErrorCode_h
 
@@ -23,6 +25,7 @@ typedef NS_ENUM(NSInteger, JTErrorType) {
     JTErrorTypeFileUploadFail     = 10009, // 文件上传失败
     JTErrorTypeParameterError     = 10010, // 参数异常
     JTErrorTypeEmptyData          = 10011, // 数据为空
+    JTErrorTypeFileSizeExceedLimit = 10012, // 超过上传最大文件限制
 };
 
 /**
@@ -42,6 +45,7 @@ static inline NSString *JTErrorMsgWithType(JTErrorType errorType) {
         case JTErrorTypeFileUploadFail: msg = @"文件上传失败"; break;
         case JTErrorTypeParameterError: msg = @"参数异常"; break;
         case JTErrorTypeEmptyData: msg = @"数据为空"; break;
+        case JTErrorTypeFileSizeExceedLimit: msg = @"超过上传最大文件限制"; break;
         default: msg = @"未知错误"; break;
     }
     return msg;
@@ -55,4 +59,11 @@ static inline NSError *JTErrorCreateWithType(JTErrorType errorType) {
     return [NSError errorWithDomain:@"com.jt.sdk.error" code:errorType userInfo:userInfo];
 }
 
+static inline NSError *JTErrorCreateWithDescription(JTErrorType errorType, NSString *descriptionText) {
+    NSDictionary *userInfo = @{NSLocalizedDescriptionKey : descriptionText};
+    return [NSError errorWithDomain:@"com.jt.sdk.error" code:errorType userInfo:userInfo];
+}
+
 #endif /* JTErrorCode_h */
+
+NS_ASSUME_NONNULL_END

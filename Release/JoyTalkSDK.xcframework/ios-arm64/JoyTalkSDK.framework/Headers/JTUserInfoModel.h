@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *uuid;
 
 /** 商户ID */
-@property (nonatomic, assign) int merchantId;
+@property (nonatomic, assign) NSInteger merchantId;
 
 /** 用户昵称 */
 @property (nonatomic, copy, nullable) NSString *nickname;
